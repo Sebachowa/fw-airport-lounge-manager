@@ -1,2 +1,29 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lounge-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 20rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 0 0 rgba(0, 0, 0, 0.03);
+  padding: 20px;
+}
+
+.book-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 20rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 0 0 rgba(0, 0, 0, 0.03);
+  padding: 20px;
+}

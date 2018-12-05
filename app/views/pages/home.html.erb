@@ -1,6 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Discover our amazings lounges</h1>
 
-<% @lounges.each do |lounge| %>
-  <%= lounge %>
-<% end %>
+<div class="card-list">
+  <% @lounges.each do |lounge| %>
+    <div class="card lounge-card">
+      <div class="card-body">
+        <h4 class="card-title"><strong><%= lounge[:name] %></strong></h4>
+        <p class="card-text"><%= lounge[:description] %>
+        </p>
+        <p class="card-text"><strong>$ <%= lounge[:price] %></strong></p>
+        <%= link_to "More info", lounge_detail_path(lounge[:id]), class:"btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+

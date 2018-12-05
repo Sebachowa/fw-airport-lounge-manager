@@ -43,13 +43,18 @@ API:
 ## ROUTES:
 ```
 GET /
-POST /booking - POST Body: user, date, services
+POST /lounge/:id/booking
+  Params: lounge_id
+  Body: user, date, services
 
 GET /auth/signup
-POST auth/signup - POST Body: username, password, role
+POST auth/signup
+  Body: username, password, role
 GET /auth/login
-POST /auth/login - POST Body: username, password
-POST auth/logout - POST Body: nothing
+POST /auth/login
+  Body: username, password
+POST auth/logout
+  POST Body: nothing
 
 GET /admin
 GET /admin/lounges/create
@@ -64,7 +69,8 @@ POST /admin/lounges/:id/services/edit
 POST /admin/lounges/:id/services/delete
 
 GET /api/v1/lounges/availability?date=<date>
-POST /api/v1/lounges/book - POST Body: date
+POST /api/v1/lounges/book
+  POST Body: date
 
 ```
 
