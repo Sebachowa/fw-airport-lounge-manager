@@ -74,7 +74,7 @@ POST /api/v1/lounges/book - POST Body: date
 User
   - name: String
   - password: String
-  - isAdmin: Boolean (default: false)
+  - is_admin: Boolean (default: false)
 ```    
  
 ```
@@ -82,20 +82,23 @@ Lounge
   - name: String
   - price: String
   - description: String
+  - is_legacy: Boolean (default: false)
+  - capacity: Number
+  - feed_id: number
 ```
 
 ```
 Booking (join table)
   - owner: Id
   - lounge: Id
-  - invitees: Number (default: 0)
-  - gim: Boolean (default: false)
-  - spa: Boolean (default: false)
+  - date: Date
+  - is_with_metting_room: Boolean (default: false)
+  - is_with_gim: Boolean (default: false)
+  - is_with_spa: Boolean (default: false)
+  - total_people: Number (default: 1)
 ```
 
 ## Links
 [Trello](https://trello.com)
 [Github](http://github.com)
 [Deploy](http://heroku.com)
-
-

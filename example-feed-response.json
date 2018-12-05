@@ -1,0 +1,447 @@
+[
+  {
+    "lounge_id": 1,
+    "availability": [
+      {
+        "date": "2018-11-28",
+        "remaining": 0
+      },
+      {
+        "date": "2018-11-29",
+        "remaining": 4
+      },
+      {
+        "date": "2018-11-30",
+        "remaining": 1
+      },
+      {
+        "date": "2018-12-01",
+        "remaining": 4
+      },
+      {
+        "date": "2018-12-02",
+        "remaining": 5
+      },
+      {
+        "date": "2018-12-03",
+        "remaining": 7
+      },
+      {
+        "date": "2018-12-04",
+        "remaining": 9
+      },
+      {
+        "date": "2018-12-05",
+        "remaining": 11
+      },
+      {
+        "date": "2018-12-06",
+        "remaining": 4
+      },
+      {
+        "date": "2018-12-07",
+        "remaining": 8
+      },
+      {
+        "date": "2018-12-08",
+        "remaining": 4
+      },
+      {
+        "date": "2018-12-09",
+        "remaining": 14
+      },
+      {
+        "date": "2018-12-10",
+        "remaining": 0
+      },
+      {
+        "date": "2018-12-11",
+        "remaining": 4
+      },
+      {
+        "date": "2018-12-12",
+        "remaining": 12
+      },
+      {
+        "date": "2018-12-13",
+        "remaining": 12
+      },
+      {
+        "date": "2018-12-14",
+        "remaining": 19
+      },
+      {
+        "date": "2018-12-15",
+        "remaining": 2
+      },
+      {
+        "date": "2018-12-16",
+        "remaining": 4
+      },
+      {
+        "date": "2018-12-17",
+        "remaining": 4
+      },
+      {
+        "date": "2018-12-18",
+        "remaining": 6
+      }
+    ]
+  },
+  {
+    "lounge_id": 77,
+    "availability": [
+      {
+        "date": "2018-11-28",
+        "remaining": 2
+      },
+      {
+        "date": "2018-11-29",
+        "remaining": 5
+      },
+      {
+        "date": "2018-11-30",
+        "remaining": 6
+      },
+      {
+        "date": "2018-12-01",
+        "remaining": 5
+      },
+      {
+        "date": "2018-12-02",
+        "remaining": 1
+      },
+      {
+        "date": "2018-12-03",
+        "remaining": 6
+      },
+      {
+        "date": "2018-12-04",
+        "remaining": 4
+      },
+      {
+        "date": "2018-12-05",
+        "remaining": 0
+      },
+      {
+        "date": "2018-12-06",
+        "remaining": 10
+      },
+      {
+        "date": "2018-12-07",
+        "remaining": 7
+      },
+      {
+        "date": "2018-12-08",
+        "remaining": 11
+      },
+      {
+        "date": "2018-12-09",
+        "remaining": 0
+      },
+      {
+        "date": "2018-12-10",
+        "remaining": 4
+      },
+      {
+        "date": "2018-12-11",
+        "remaining": 1
+      },
+      {
+        "date": "2018-12-12",
+        "remaining": 18
+      },
+      {
+        "date": "2018-12-13",
+        "remaining": 12
+      },
+      {
+        "date": "2018-12-14",
+        "remaining": 12
+      },
+      {
+        "date": "2018-12-15",
+        "remaining": 14
+      },
+      {
+        "date": "2018-12-16",
+        "remaining": 19
+      },
+      {
+        "date": "2018-12-17",
+        "remaining": 23
+      },
+      {
+        "date": "2018-12-18",
+        "remaining": 15
+      }
+    ]
+  },
+  {
+    "lounge_id": 24,
+    "availability": [
+      {
+        "date": "2018-11-28",
+        "remaining": 0
+      },
+      {
+        "date": "2018-11-29",
+        "remaining": 2
+      },
+      {
+        "date": "2018-11-30",
+        "remaining": 0
+      },
+      {
+        "date": "2018-12-01",
+        "remaining": 7
+      },
+      {
+        "date": "2018-12-02",
+        "remaining": 7
+      },
+      {
+        "date": "2018-12-03",
+        "remaining": 1
+      },
+      {
+        "date": "2018-12-04",
+        "remaining": 1
+      },
+      {
+        "date": "2018-12-05",
+        "remaining": 10
+      },
+      {
+        "date": "2018-12-06",
+        "remaining": 12
+      },
+      {
+        "date": "2018-12-07",
+        "remaining": 0
+      },
+      {
+        "date": "2018-12-08",
+        "remaining": 2
+      },
+      {
+        "date": "2018-12-09",
+        "remaining": 3
+      },
+      {
+        "date": "2018-12-10",
+        "remaining": 10
+      },
+      {
+        "date": "2018-12-11",
+        "remaining": 13
+      },
+      {
+        "date": "2018-12-12",
+        "remaining": 8
+      },
+      {
+        "date": "2018-12-13",
+        "remaining": 18
+      },
+      {
+        "date": "2018-12-14",
+        "remaining": 0
+      },
+      {
+        "date": "2018-12-15",
+        "remaining": 13
+      },
+      {
+        "date": "2018-12-16",
+        "remaining": 12
+      },
+      {
+        "date": "2018-12-17",
+        "remaining": 3
+      },
+      {
+        "date": "2018-12-18",
+        "remaining": 3
+      }
+    ]
+  },
+  {
+    "lounge_id": -5,
+    "availability": [
+      {
+        "date": "2018-11-28",
+        "remaining": 3
+      },
+      {
+        "date": "2018-11-29",
+        "remaining": 4
+      },
+      {
+        "date": "2018-11-30",
+        "remaining": 6
+      },
+      {
+        "date": "2018-12-01",
+        "remaining": 2
+      },
+      {
+        "date": "2018-12-02",
+        "remaining": 1
+      },
+      {
+        "date": "2018-12-03",
+        "remaining": 0
+      },
+      {
+        "date": "2018-12-04",
+        "remaining": 6
+      },
+      {
+        "date": "2018-12-05",
+        "remaining": 4
+      },
+      {
+        "date": "2018-12-06",
+        "remaining": 5
+      },
+      {
+        "date": "2018-12-07",
+        "remaining": 7
+      },
+      {
+        "date": "2018-12-08",
+        "remaining": 2
+      },
+      {
+        "date": "2018-12-09",
+        "remaining": 8
+      },
+      {
+        "date": "2018-12-10",
+        "remaining": 12
+      },
+      {
+        "date": "2018-12-11",
+        "remaining": 6
+      },
+      {
+        "date": "2018-12-12",
+        "remaining": 13
+      },
+      {
+        "date": "2018-12-13",
+        "remaining": 6
+      },
+      {
+        "date": "2018-12-14",
+        "remaining": 11
+      },
+      {
+        "date": "2018-12-15",
+        "remaining": 8
+      },
+      {
+        "date": "2018-12-16",
+        "remaining": 21
+      },
+      {
+        "date": "2018-12-17",
+        "remaining": 15
+      },
+      {
+        "date": "2018-12-18",
+        "remaining": 0
+      }
+    ]
+  },
+  {
+    "lounge_id": 9999,
+    "availability": [
+      {
+        "date": "2018-11-28",
+        "remaining": 2
+      },
+      {
+        "date": "2018-11-29",
+        "remaining": 5
+      },
+      {
+        "date": "2018-11-30",
+        "remaining": 0
+      },
+      {
+        "date": "2018-12-01",
+        "remaining": 4
+      },
+      {
+        "date": "2018-12-02",
+        "remaining": 7
+      },
+      {
+        "date": "2018-12-03",
+        "remaining": 5
+      },
+      {
+        "date": "2018-12-04",
+        "remaining": 10
+      },
+      {
+        "date": "2018-12-05",
+        "remaining": 5
+      },
+      {
+        "date": "2018-12-06",
+        "remaining": 12
+      },
+      {
+        "date": "2018-12-07",
+        "remaining": 8
+      },
+      {
+        "date": "2018-12-08",
+        "remaining": 12
+      },
+      {
+        "date": "2018-12-09",
+        "remaining": 1
+      },
+      {
+        "date": "2018-12-10",
+        "remaining": 6
+      },
+      {
+        "date": "2018-12-11",
+        "remaining": 13
+      },
+      {
+        "date": "2018-12-12",
+        "remaining": 4
+      },
+      {
+        "date": "2018-12-13",
+        "remaining": 0
+      },
+      {
+        "date": "2018-12-14",
+        "remaining": 13
+      },
+      {
+        "date": "2018-12-15",
+        "remaining": 16
+      },
+      {
+        "date": "2018-12-16",
+        "remaining": 4
+      },
+      {
+        "date": "2018-12-17",
+        "remaining": 10
+      },
+      {
+        "date": "2018-12-18",
+        "remaining": 18
+      }
+    ]
+  }
+]
