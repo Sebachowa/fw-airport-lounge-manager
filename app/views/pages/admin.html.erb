@@ -1,0 +1,55 @@
+<h2>Your lounges</h2>
+<div class="card-list">
+  <% @lounges.each do |lounge| %>
+  <div class="card lounge-card">
+    <div class="card-body">
+      <h4 class="card-title"><strong>
+          <%= lounge[:name] %></strong></h4>
+      <p class="card-text">
+        <%= lounge[:description] %>
+      </p>
+      <p class="card-text"><strong>$
+          <%= lounge[:price] %></strong></p>
+      <%= link_to "More info", lounge_detail_path(lounge[:id]), class:"btn btn-primary" %>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<h2>Create lounge</h2>
+<%= simple_form_for @lounge, url: lounge_create_path, method: :post do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :description  %>
+  <%= f.input :is_legacy, :as => :hidden, :input_html => { :value => false } %>
+  <%= f.input :capacity  %>
+  <%= f.submit 'Create', class: "btn btn-success" %>
+<% end %>
+
+<h2>Extra services</h2>
+<div class="card-list">
+  <% @services.each do |service| %>
+  <div class="card lounge-card">
+    <div class="card-body">
+      <h4 class="card-title"><strong>
+          <%= service[:name] %></strong></h4>
+      <p class="card-text">
+        <%= service[:price] %>
+      </p>
+      <%= link_to "More info", lounge_detail_path(lounge[:id]), class:"btn btn-primary" %>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<h2>Create lounge</h2>
+<%= simple_form_for @service, url: service_create_path, method: :post do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :picture  %>
+  <%= f.submit 'Create', class: "btn btn-success" %>
+<% end %>
+
+
+Create loungecreate/edit/delete lounges
+As a lounge administrator I want to be able to create/edit/delete “extra” services for a lounge

@@ -3,6 +3,13 @@ require 'json'
 
 class LoungesController < ApplicationController
 
+  def new
+    lounge_params = params.require(:lounge).permit(:name, :price, :description, :capacity)
+    lounge = Lounge.new(lounge)
+    if lounge.save
+      redirect_to admin_path
+    end
+  end
 
   def show
     id = params[:id]
