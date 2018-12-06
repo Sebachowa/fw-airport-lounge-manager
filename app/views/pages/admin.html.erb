@@ -34,14 +34,10 @@
   <% end %>
 </div>
 
-<h2>Create lounge</h2>
+<h2>Create extra service</h2>
 <%= simple_form_for @service, url: service_create_path, method: :post do |f| %>
   <%= f.input :name %>
   <%= f.input :price %>
   <%= f.input :picture  %>
   <%= f.submit 'Create', class: "btn btn-success" %>
 <% end %>
-
-
-Create loungecreate/edit/delete lounges
-As a lounge administrator I want to be able to create/edit/delete “extra” services for a lounge
