@@ -3,14 +3,9 @@
   <% @lounges.each do |lounge| %>
   <div class="card lounge-card">
     <div class="card-body">
-      <h4 class="card-title"><strong>
-          <%= lounge[:name] %></strong></h4>
-      <p class="card-text">
-        <%= lounge[:description] %>
-      </p>
-      <p class="card-text"><strong>$
-          <%= lounge[:price] %></strong></p>
-      <%= link_to "More info", lounge_detail_path(lounge[:id]), class:"btn btn-primary" %>
+      <h4 class="card-title"><strong><%= lounge[:name] %></strong></h4>
+      <p class="card-text"><%= lounge[:description] %></p>
+      <p class="card-text"><strong>$ <%= lounge[:price] %></strong></p>
     </div>
   </div>
   <% end %>
@@ -31,12 +26,9 @@
   <% @services.each do |service| %>
   <div class="card lounge-card">
     <div class="card-body">
-      <h4 class="card-title"><strong>
-          <%= service[:name] %></strong></h4>
-      <p class="card-text">
-        <%= service[:price] %>
+      <h4 class="card-title"><strong><%= service[:name] %></strong></h4>
+      <p class="card-text">$ <%= service[:price] %>
       </p>
-      <%= link_to "More info", lounge_detail_path(lounge[:id]), class:"btn btn-primary" %>
     </div>
   </div>
   <% end %>
