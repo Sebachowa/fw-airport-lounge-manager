@@ -70,41 +70,58 @@ POST /admin/lounges/:id/services/delete
 
 GET /api/v1/lounges/availability?date=<date>
 POST /api/v1/lounges/book
-  POST Body: date
+  POST Body: date, lounge_id, user)_id
 
 ```
 
 ## MODELS
 
 ```
-User
-  - name: String
-  - password: String
-  - is_admin: Boolean (default: false)
-```    
- 
-```
-Lounge
-  - name: String
-  - price: String
-  - description: String
-  - is_legacy: Boolean (default: false)
-  - capacity: Number
-  - feed_id: number
+Availability
+  - lounge_id
+  - remaining, 
+  - date_time
 ```
 
 ```
-Booking (join table)
-  - owner: Id
-  - lounge: Id
-  - date: Date
-  - is_with_metting_room: Boolean (default: false)
-  - is_with_gim: Boolean (default: false)
-  - is_with_spa: Boolean (default: false)
-  - total_people: Number (default: 1)
+Booking_services (join table)
+  - booking_id
+  - service_id
 ```
 
-## Links
-[Trello](https://trello.com)
-[Github](http://github.com)
-[Deploy](http://heroku.com)
+```
+Bookings
+  - user_id
+  - lounge_id
+  - total_people
+  - date_time
+```
+
+```
+Lounge_services
+  - lounge_id
+  - service_id
+```
+
+```
+Lounges
+  - name
+  - price
+  - description
+  - is_legacy
+  - capacity
+  - feed_id
+```
+
+```
+services
+  - name
+  - price
+  - picture
+```
+
+```
+users
+  - email
+  - password
+```
