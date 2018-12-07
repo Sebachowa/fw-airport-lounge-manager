@@ -15,11 +15,4 @@ class PagesController < ApplicationController
       redirect_to root_path
     end
   end
-  
-  # private
-  
-  # def start_background_job
-  #   ApiFetchWorker.perform_async()
-  # end
-
 end
