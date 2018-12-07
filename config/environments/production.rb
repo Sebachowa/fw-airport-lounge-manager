@@ -1,6 +1,6 @@
 Rails.application.configure do
   config.action_mailer.default_url_options = { host: "http://fw-airport-lounge-manager.herokuapp.com" }
-
+  config.redis_host   = "redis://redistogo:01bc1017ab22502464a01be4ece9920e@soapfish.redistogo.com:10635/"
   # Verifies that versions and hashed value of the package contents in the project's package.json
   config.webpacker.check_yarn_integrity = false
   # Settings specified here will take precedence over those in config/application.rb.
