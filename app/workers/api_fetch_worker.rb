@@ -25,7 +25,7 @@ class ApiFetchWorker
         lounge = Lounge.where(["feed_id = ?", legacy_lounge["lounge_id"]]).first
         
         legacy_lounge["availability"].each do |date|
-          availability = Availability.create(lounge_id: lounge.id, date: date["date"], remaining: date["remaining"])
+          availability = Availability.create(lounge_id: lounge.id, date_time: date["date"], remaining: date["remaining"])
         end
       end
     end

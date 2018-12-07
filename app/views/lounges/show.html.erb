@@ -13,13 +13,11 @@
       <p class="card-text"><%= availability[:remaining] %> spots left</p>
         <%= simple_form_for @booking, url: lounge_book_path(@lounge[:id]), method: :post do |f| %>
           <%= f.input :date_time, :as => :hidden, :input_html => { :value => availability[:date] } %>
-          <%=
-              f.input :services, {
+          <%= f.input :services, {
                 as:         :check_boxes,
                 collection: @lounge.services.map { |service| [service.name, service.id] },
                 checked:    f.object.services
-              }
-            %>
+              } %>
             <%= f.input :total_people, as: :integer, label: "Invitees"   %>
             <%= f.submit 'Book Now', class: "btn btn-success" %>
           <% end %>
