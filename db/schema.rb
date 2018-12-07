@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_06_135152) do
+ActiveRecord::Schema.define(version: 2018_12_07_131942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,13 @@ ActiveRecord::Schema.define(version: 2018_12_06_135152) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
+  create_table "lounge_services", force: :cascade do |t|
+    t.integer "lounge_id"
+    t.integer "service_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "lounges", force: :cascade do |t|
     t.string "name"
     t.integer "price"
@@ -47,8 +54,6 @@ ActiveRecord::Schema.define(version: 2018_12_06_135152) do
     t.integer "feed_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "services_id"
-    t.index ["services_id"], name: "index_lounges_on_services_id"
   end
 
   create_table "services", force: :cascade do |t|
@@ -73,7 +78,6 @@ ActiveRecord::Schema.define(version: 2018_12_06_135152) do
   end
 
   add_foreign_key "availabilities", "lounges"
-  add_foreign_key "bookings", "lounges"
+  add_foreign_key "bookings", "lounges", on_delete: :cascade
   add_foreign_key "bookings", "users"
-  add_foreign_key "lounges", "services", column: "services_id"
 end

@@ -1,0 +1,9 @@
+<h2>Edit lounge</h2>
+  <%= simple_form_for @lounge, url: lounge_update_path(@lounge[:id]), method: :post do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :description  %>
+  <%= f.input :is_legacy, :as => :hidden, :input_html => { :value => false } %>
+  <%= f.input :capacity  %>
+  <%= f.submit 'Create', class: "btn btn-success" %>
+<% end %>

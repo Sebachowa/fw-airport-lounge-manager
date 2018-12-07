@@ -1,4 +1,4 @@
-<h2>Your lounges</h2>
+<h2>Your lounges <span><%= link_to "Create", lounge_new_path, method: :get, class: "btn btn-success" %></span></h2>
 <div class="card-list">
   <% @lounges.each do |lounge| %>
   <div class="card lounge-card">
@@ -6,20 +6,12 @@
       <h4 class="card-title"><strong><%= lounge[:name] %></strong></h4>
       <p class="card-text"><%= lounge[:description] %></p>
       <p class="card-text"><strong>$ <%= lounge[:price] %></strong></p>
+      <%= link_to "Edit", lounge_edit_path(lounge[:id]), method: :get, class: "btn btn-warning" %>
+      <%= link_to "Delete", lounge_destroy_path(lounge[:id]), method: :delete, class: "btn btn-danger" %>
     </div>
   </div>
   <% end %>
 </div>
-
-<h2>Create lounge</h2>
-<%= simple_form_for @lounge, url: lounge_create_path, method: :post do |f| %>
-  <%= f.input :name %>
-  <%= f.input :price %>
-  <%= f.input :description  %>
-  <%= f.input :is_legacy, :as => :hidden, :input_html => { :value => false } %>
-  <%= f.input :capacity  %>
-  <%= f.submit 'Create', class: "btn btn-success" %>
-<% end %>
 
 <h2>Extra services</h2>
 <div class="card-list">

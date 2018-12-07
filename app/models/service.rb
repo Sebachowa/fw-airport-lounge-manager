@@ -1,3 +1,4 @@
 class Service < ApplicationRecord
-  belongs_to :lounge, optional: true
+  has_many :lounge_services
+  has_many :lounges, :through => :lounge_services
 end

@@ -4,12 +4,24 @@ require 'json'
 class LoungesController < ApplicationController
 
   def new
-    lounge_params = params.require(:lounge).permit(:name, :price, :description, :capacity)
-    lounge = Lounge.new(lounge_params)
-    if lounge.save
-      redirect_to admin_path
-    end
+    @lounge = Lounge.new()
+    @services = Service.all
   end
+
+  def create
+    lounge_params = params.require(:lounge).permit(:name, :price, :description, :is_legacy, :capacity)
+    services_params = params.require(:lounge).permit(:services => []).reject { |c| c.empty? }
+
+    lounge = Lounge.create(lounge_params)
+    services_params[:services].each do |service|
+      lounge_service = LoungeService.create( { service_id: service.to_i, lounge_id: lounge[:id] } )
+      p '1'
+      p '-----'
+      p lounge_service
+    end
+    redirect_to admin_path
+  end
+
 
   #TODO - THIS CONTROLLER IS TOO FAT
   def show
@@ -48,6 +60,24 @@ class LoungesController < ApplicationController
         end
       end
     end
+  end
+
+  def edit
+    id = params[:id]
+    @lounge = Lounge.find(id)
+  end
+
+  def update
+    lounge_params = params.require(:lounge).permit(:name, :price, :description, :capacity)
+    lounge = Lounge.find(params[:id])
+    lounge.update(lounge_params)
+    redirect_to admin_path
+  end
+
+  def destroy
+    lounge = Lounge.find(params[:id])
+    lounge.delete
+    redirect_to admin_path
   end
 
   def booking

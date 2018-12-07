@@ -1,0 +1,15 @@
+<%= simple_form_for @lounge, url: lounge_create_path, method: :post do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :description  %>
+  <%= f.input :is_legacy, :as => :hidden, :input_html => { :value => false } %>
+  <%= f.input :capacity  %>
+  <%=
+    f.input :services, {
+      as:         :check_boxes,
+      collection: @services.map { |service| [service.name, service.id] },
+      checked:    f.object.services
+    }
+  %>
+  <%= f.submit 'Create', class: "btn btn-success" %>
+<% end %>
