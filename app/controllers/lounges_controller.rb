@@ -20,8 +20,6 @@ class LoungesController < ApplicationController
     redirect_to admin_path
   end
 
-
-  #TODO - THIS CONTROLLER IS TOO FAT
   def show
     id = params[:id]
     @lounge = Lounge.find(id)
