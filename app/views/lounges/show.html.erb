@@ -4,21 +4,23 @@
 
 <div class="card-list">
   <% @availability.each do |availability| %>
-  <div class="card book-card">
-    <div class="card-body">
-      <h4 class="card-title"><strong><%= availability[:date] %></strong></h4>
-      <% if availability[:remaining] <= 0 %>
-      <p class="card-text">Sold out!</p>
-      <% else %>
-      <p class="card-text"><%= availability[:remaining] %> spots left</p>
-        <%= simple_form_for @booking, url: lounge_book_path(@lounge[:id]), method: :post do |f| %>
-          <%= f.input :date_time, :as => :hidden, :input_html => { :value => availability[:date] } %>
-          <%= f.input :services, {
-                as:         :check_boxes,
-                collection: @lounge.services.map { |service| [service.name, service.id] },
-                checked:    f.object.services
-              } %>
-            <%= f.input :total_people, as: :integer, label: "Invitees"   %>
+    <div class="card book-card">
+      <div class="card-body">
+        <h4 class="card-title"><strong><%= availability[:date] %></strong></h4>
+        <% if availability[:remaining] <= 0 %>
+          <p class="card-text">Sold out!</p>
+        <% else %>
+          <p class="card-text"><%= availability[:remaining] %> spots left</p>
+          <%= simple_form_for @booking, url: lounge_book_path(@lounge[:id]), method: :post do |f| %>
+            <%= f.input :date_time, :as => :hidden, :input_html => { :value => availability[:date] } %>
+            <%= f.input :services, {
+              as:         :check_boxes,
+              collection: @lounge.services.map { |service| [service.name, service.id] },
+              checked:    f.object.services
+            } %>
+            <% if @invitees == true %>
+              <%= f.input :total_people, as: :integer, label: "Invitees"   %>
+            <% end %>
             <%= f.submit 'Book Now', class: "btn btn-success" %>
           <% end %>
         <% end %>

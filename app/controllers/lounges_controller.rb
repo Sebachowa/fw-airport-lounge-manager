@@ -25,8 +25,13 @@ class LoungesController < ApplicationController
   def show
     id = params[:id]
     @lounge = Lounge.find(id)
-    p "--------------------------------------------"
-    p @lounge.services
+    @invitees = false
+    @lounge.services.each do |item|
+      p item
+      if item.id == 1
+        @invitees = true
+      end
+    end 
     @booking = Booking.new
     bookings = Booking.where(lounge_id: id)
     if @lounge[:is_legacy] == true
