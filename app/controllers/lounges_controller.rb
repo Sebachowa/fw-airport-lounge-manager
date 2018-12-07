@@ -1,5 +1,6 @@
 require 'net/http'
 require 'json'
+require 'date'
 
 class LoungesController < ApplicationController
 
@@ -32,8 +33,8 @@ class LoungesController < ApplicationController
       @availability = Availability.where(lounge_id: id)
       bookings.each do |booking|
         @availability.map do |avai| 
-          if avai[:date] == booking.date
-            avai[:remaining] -= booking.total_people
+          if avai[:date] == Date.parse(booking[:date_time])
+            avai[:remaining] -= booking[:total_people]
           else
             avai
           end
@@ -51,8 +52,8 @@ class LoungesController < ApplicationController
 
       bookings.each do |booking|
         @availability.map do |avai| 
-          if avai[:date] == booking.date
-            avai[:remaining] -= booking.total_people
+          if avai[:date] == Date.parse(booking[:date_time])
+            avai[:remaining] -= booking[:total_people]
           else
             avai
           end
