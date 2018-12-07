@@ -15,9 +15,6 @@ class LoungesController < ApplicationController
     lounge = Lounge.create(lounge_params)
     services_params[:services].each do |service|
       lounge_service = LoungeService.create( { service_id: service.to_i, lounge_id: lounge[:id] } )
-      p '1'
-      p '-----'
-      p lounge_service
     end
     redirect_to admin_path
   end
@@ -27,6 +24,8 @@ class LoungesController < ApplicationController
   def show
     id = params[:id]
     @lounge = Lounge.find(id)
+    p "--------------------------------------------"
+    p @lounge.services
     @booking = Booking.new
     bookings = Booking.where(lounge_id: id)
     if @lounge[:is_legacy] == true

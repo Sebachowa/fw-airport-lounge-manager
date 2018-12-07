@@ -1,6 +1,4 @@
 puts 'Creating Admin User...'
-puts ' '
-
 user = User.new
 user.email = 'admin@gmail.com'
 user.password = 'admin1234'
@@ -8,7 +6,7 @@ user.is_admin = true
 user.save!
 
 puts 'Admin user created'
-p User.all[0]
+puts '-----------------------------'
 
 lounge_list = [{
   name: 'South',
@@ -47,24 +45,6 @@ lounge_list = [{
   feed_id: 9999
 }]
 
-puts 'Creating Lounges ...'
-puts ' '
-
-lounge_list.each do |lounge|
-  new_lounge = Lounge.new
-  new_lounge.name = lounge[:name]
-  new_lounge.price = lounge[:price]
-  new_lounge.description = lounge[:description]
-  new_lounge.is_legacy = lounge[:is_legacy]
-  new_lounge.capacity = lounge[:capacity]
-  new_lounge.feed_id = lounge[:feed_id]
-  new_lounge.save!
-end
-
-puts 'Lounges created'
-puts ' '
-p Lounge.all
-
 service_list = [{
   name: 'Meeting room',
   price: 5,
@@ -80,7 +60,6 @@ service_list = [{
 }]
 
 puts 'Creating Extra Services ...'
-puts ' '
 
 service_list.each do |service|
   new_service = Service.new
@@ -91,5 +70,27 @@ service_list.each do |service|
 end
 
 puts 'Extra Services created'
-puts ' '
-p Service.all
+puts '-----------------------------'
+services = Service.all
+
+puts 'Creating Lounges ...'
+
+lounge_list.each do |lounge|
+  new_lounge = Lounge.create({
+    name: lounge[:name],
+    price: lounge[:price],
+    description: lounge[:description],
+    is_legacy: lounge[:is_legacy],
+    capacity: lounge[:capacity],
+    feed_id: lounge[:feed_id]
+  })
+  services.each do |service|
+    LoungeService.create( { service_id: service[:id], lounge_id: new_lounge[:id] } )
+  end
+end
+
+puts '-----------------------------'
+puts 'Lounges created'
+puts '-----------------------------'
+puts 'Seeding finished!'
+
