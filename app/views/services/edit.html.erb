@@ -1,0 +1,7 @@
+<h2>Edit service</h2>
+  <%= simple_form_for @service, url: service_update_path(@service[:id]), method: :post do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :picture  %>
+  <%= f.submit 'Update', class: "btn btn-success" %>
+<% end %>

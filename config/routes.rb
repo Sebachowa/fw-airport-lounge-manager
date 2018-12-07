@@ -17,7 +17,13 @@ Rails.application.routes.draw do
 
   get '/admin/lounge/:id', to: 'lounges#edit', as: 'lounge_edit'
   post '/admin/lounge/:id', to: 'lounges#update', as: 'lounge_update'
-  post '/admin/service', to: 'services#new', as: 'service_create'
+
+  get '/admin/service', to: 'services#new', as: 'service_new'
+  post '/admin/service', to: 'services#create', as: 'service_create'
+  delete '/admin/service/:id', to: 'services#destroy', as: 'service_destroy'
+
+  get '/admin/service/:id', to: 'services#edit', as: 'service_edit'
+  post '/admin/service/:id', to: 'services#update', as: 'service_update'
 
   get '/lounge/:id', to: 'lounges#show', as: 'lounge_detail'
   post '/lounge/:id', to: 'bookings#new', as: 'lounge_book'

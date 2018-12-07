@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   def admin
     @lounges = Lounge.all
     @services = Service.all
+    @bookings = Booking.all
     @lounge = Lounge.new()
     @service = Service.new()
     if current_user.is_admin == false

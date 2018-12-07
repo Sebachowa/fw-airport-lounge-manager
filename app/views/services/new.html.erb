@@ -1,0 +1,7 @@
+<h2>Create extra service</h2>
+<%= simple_form_for @service, url: service_create_path, method: :post do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :picture  %>
+  <%= f.submit 'Create', class: "btn btn-success" %>
+<% end %>
